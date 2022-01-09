@@ -30,7 +30,7 @@
 
                 </form>
                 <a href="{{route('login')}}" class="btn btn-link">Login</a>
-                <a href="{{route('dashboard')}}" class="btn btn-link">dashboard</a>
+
 
         </div>
 

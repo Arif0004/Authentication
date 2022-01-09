@@ -28,6 +28,7 @@
                     </div>
 
                 </form>
+                <a href="{{route('register')}}" class="btn btn-link">Register</a>
 
 
         </div>
