@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -22,18 +23,19 @@ class AuthController extends Controller
         return view('auth.register');
 
     }
+
    public function store(Request $request){
-    User::create([
+    $user=User::create([
         'name' => $request->input('name'),
         'email'=>$request->input('email'),
         'password'=>bcrypt($request->input('password')),
     ]);
-
+        event(new Registered($user));
         return redirect()->route('login');
 
 
     }
-    public function authenticate(Request $request){
+    public function auth(Request $request){
 
         $credentials = $request->validate([
 
@@ -56,15 +58,17 @@ class AuthController extends Controller
 
         }
 
-
-
-
-
-
-
-
-
     }
+        public function logout(Request $request){
+            Auth::logout();
+            $request->session()->invalidate();
+            $request->session()->regenerate();
+            return redirect()->route('login');
+            //return 5;
+
+
+
+        }
 
 
 

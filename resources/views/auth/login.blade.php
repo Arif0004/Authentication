@@ -9,7 +9,7 @@
     <div class="row justify-content-center mt">
         <div class="col md-6">
             <h4 class="text-center">User Login </h4>
-                <form action="{{ route('login') }}" method="POST">
+                <form action="{{ route('auth') }}" method="POST">
                     @csrf
                     <div class="form-group my-4">
 

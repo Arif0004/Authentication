@@ -7,8 +7,9 @@
 
 <div class="container">
 
-    <h1>Hi, Arif !</h1>
-   <form action="">
+    <h1>Hi, {{auth()->user()->name ?? 'NULL'}}</h1>
+   <form action="{{route('logout')}}" method="POST">
+    @csrf
 
     <div class="form-group">
         <button class="btn btn-sm btn-success btn-block">Logout</button>

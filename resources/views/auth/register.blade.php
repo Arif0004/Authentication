@@ -15,13 +15,13 @@
                         <input type="text" class="form-control" placeholder="Name" name="name">
                     </div>
                     <div class="form-group my-4">
-                        <input type="text" class="form-control" placeholder="Email" name="email">
+                        <input type="email" class="form-control" placeholder="Email" name="email">
                     </div>
                     <div class="form-group my-4">
-                        <input type="password" class="form-control" placeholder="Password" name="pssword">
+                        <input type="password" class="form-control" placeholder="Password" name="password">
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control" placeholder="Confirm Password" name="pssword_confirmation">
+                        <input type="password" class="form-control" placeholder="Confirm Password" name="password_confirmation">
                     </div>
                     <div class="form-group mt-3">
                         <button class="btn btn-sm btn-success btn-block">Register</button>
